@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang='ja'>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>{% block title %}{% endblock title %}</title>
+
+        {% load static %}
+        
+        <!--cssファイル-->
+        <link rel="stylesheet" href={% static "./style.css" %}>
+
+        <!--MDB-->
+        <!-- Font Awesome -->
+        <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        rel="stylesheet"
+        />
+        <!-- Google Fonts -->
+        <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        rel="stylesheet"
+        />
+        <!-- MDB -->
+        <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css"
+        rel="stylesheet"/>
+        <!-- MDB -->
+        <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"
+        ></script>
+
+
+        <!--NOW UI KIT-->
+        <!-- CSS Files -->
+        {% comment %} <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../assets/css/now-ui-kit.css?v=1.2.0" rel="stylesheet" /> {% endcomment %}
+
+        <!-- Plugins -->
+
+        <!--   Core JS Files   -->
+        <script src="../assets/js/core/jquery.min.js" type="text/javascript"></script>
+        <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+
+        <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+        <script src="../assets/js/plugins/bootstrap-switch.js"></script>
+
+        <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+        <script src="../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+
+        <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker --><script src="../assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
+
+        <!--  Google Maps Plugin    -->
+        <script  src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+
+        <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+        <script src="../assets/js/now-ui-kit.js?v=1.2.0" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <!--上部固定nav-->
+        <div class="collapse navbar fixed-top navbar-dark bg-dark" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+            <h5 class="text-white h4">＃＃＃＃＃＃＃＃＃＃＃＃</h5>
+                <nav>
+                    <ul><span class="text-muted" id="float">リンク</span></ul>
+                    <br> 
+                    <ul><span class="text-muted" id="float">リンク</span></ul>
+                    <br>
+                    <ul><span class="text-muted">リンク</span></ul>
+                    <br>
+                    <ul><span class="text-muted">リンク</span></ul>
+                </nav>
+            </div>
+            
+        </div>
+        
+        <nav class="navbar fixed-top navbar-dark bg-dark">
+            <div class="container-fluid">
+            <nav class="navbar navbar-dark bg-dark">
+                <button
+                class="navbar-toggler"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarToggleExternalContent"
+                aria-controls="navbarToggleExternalContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >
+                <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+            </div>
+        </nav>
+        <!---->
+
+        
+        <p>base</p>
+        <p>base</p>
+        <p>base</p>
+        <p>base</p>
+        <p color = "red">base</p>
+
+
+
+        <div>
+
+
+            <h1>{% block h1 %}{% endblock %}</h1>
+
+            {% block content %}{% endblock content %}
+        </div>
+
+    </body>
+</html>
